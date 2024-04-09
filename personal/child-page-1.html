@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="styles/child1.css">
+    <style>
+        .dropbtn {
+          background-color: #3498DB;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #2980B9;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {background-color: #ddd;}
+        
+        .show {display: block;}
+        </style>
+</head>
+<body>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+    <header>
+      <h1>[Star-Wars Character Page]</h1>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">Home Page</a>
+          <a href="site-plan.html">Site Plan</a>
+          <a href="child-page-2.html">Marvel Page</a>
+        </div>
+      </div>
+    </header>
+    <main class="sw-main">
+        <p id="sw-paragraph-1">
+        Anakin is the more offensive character. He specializes in going on the attack, with quick and aggressive moves that tend to put most of
+        his opponents on the defensive. He has very strong force abilities, which also give him a raw temporary advantage on those who don't see
+        it coming. In the case of this matchup, he would offer a good counter to Iron man's fast ranged attacks, but wouldn't do well against
+        Captian Americas fighting stlye + moveset.
+      </p>
+    <p id="sw-paragraph-2">
+        Obi-Wan is the more defensive character. He is very effective when he is able to draw in his opponents, even being able to handle multiple
+        foes for a short time. His force abilities aren't as strong as Anakins, but they are still effective when they need to be, albeit less 
+        frequently. In the case of this matchup, he would offer a good counter to Captain America's moveset and block most of his attacks, but wouldn't
+        do well vs Iron Man's ranged attacks.
+    </p>
+    <p id="sw-paragraph-3">
+        Anakin and Obi-Wan form quite the duo together. They have fought and trained together for almsot double the time their opponents have known each
+        other. This offers them a unique advantage due to their ability to work well as a team, anticipate not only what their opponents will do but what
+        the other person will do and how to compliment it!
+      </p>
+        <img src="images/Anakin.png" alt="image for page" id="sw-image-1">
+        <img src="images/Obi-Wan.png" alt="image for page" id="sw-image-2">
+        <img src="images/Anakin-and-ObiWan.jpg" alt="image for page" id="sw-image-3">
+</main>
+<footer>
+    <p class="footer-paragraph">Personal Project &copy; 2024 - Mason McShane</p>
+    <a href="site-plan.html" id="sp-link">Site Plan</a>
+    <a href="index.html" id="home-link">Main Page</a>
+</footer>
+</body>
+</html>
